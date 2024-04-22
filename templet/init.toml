@@ -11,7 +11,7 @@
 
 # board, subtarget, device, base are required, others are optional
 
-board = "mediatek"
+board = "ramips"
 subtarget = "mt7986"
 device = "xiaomi_redmi-router-ax6000"
 base = "https://github.com/immortalwrt/immortalwrt@openwrt-21.02"
