@@ -155,12 +155,12 @@ jobs:
           chmod +x $MODIFY_SH
           $MODIFY_SH
 
-      - name: Generate .config
-        env:
-          DOT_CONFIG: ${{ steps.prepare-deployment.outputs.dot_config }}
-        run: |
-          mv $DOT_CONFIG .config
-          make defconfig
+     - name: SSH链接管理
+      uses: P3TERX/ssh2actions@v1.0.0
+      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
+      env:
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
       - name: Make download
         run: |
