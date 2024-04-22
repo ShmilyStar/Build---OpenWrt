@@ -76,6 +76,7 @@ on:
         required: false
         default: '升级内容：内核升级，更新应用版本'
         type: string
+      SSH_ACTIONS: false
       release:
         description: '上传到release'
         required: false
