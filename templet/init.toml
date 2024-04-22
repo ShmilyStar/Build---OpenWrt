@@ -11,12 +11,11 @@
 
 # board, subtarget, device, base are required, others are optional
 
-board = "qualcommax"
-subtarget = "ipq807x"
-device = "xiaomi_ax9000"
-base = "https://git.openwrt.org/openwrt/openwrt.git@master"
-
-device_name = "xiaomi ax9000"
+board = "mediatek"
+subtarget = "mt7986"
+device = "xiaomi_redmi-router-ax6000"
+base = "https://github.com/immortalwrt/immortalwrt@openwrt-21.02"
+device_name = "redmi-ax6000"
 app_path = "package/_supply_packages"
 git_app = [
   "https://github.com/jerrykuku/luci-theme-argon.git",
@@ -25,5 +24,4 @@ git_app = [
   "https://github.com/xiaorouji/openwrt-passwall.git",
   "https://github.com/xiaorouji/openwrt-passwall2.git"
 ]
-login_ip = "192.168.21.1"
-login_pwd = "00009999"
+login_ip = "192.168.1.1"
